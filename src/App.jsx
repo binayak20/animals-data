@@ -1,47 +1,8 @@
 import React, { Component } from 'react';
-//import NodeGroup from 'react-move/NodeGroup';
-import { animalData } from './data';
-import './App.css';
-import Player from './Player';
 import SelectGrid from './components/animalsData/selectGrid';
-
-//let barHeight = 40;
-// let barPadding = 5;
-// let barColour = '#00FF00';
-// let widthScale = (d) => d * 5;
-
-// function BarGroup(props) {
-// 	let width = widthScale(props.state.value);
-// 	let yMid = barHeight * 0.5;
-
-// 	return (
-// 		<g className='bar-group' transform={`translate(0, ${props.state.y})`}>
-// 			<rect
-// 				y={barPadding * 0.5}
-// 				width={width}
-// 				height={barHeight - barPadding}
-// 				style={{ fill: barColour, opacity: props.state.opacity }}
-// 			/>
-// 			<text
-// 				className='value-label'
-// 				x={width - 6}
-// 				y={yMid}
-// 				alignmentBaseline='middle'
-// 			>
-// 				{props.state.value.toFixed(0)}
-// 			</text>
-// 			<text
-// 				className='name-label'
-// 				x='-6'
-// 				y={yMid}
-// 				alignmentBaseline='middle'
-// 				style={{ opacity: props.state.opacity }}
-// 			>
-// 				{props.data.name}
-// 			</text>
-// 		</g>
-// 	);
-// }
+import { animalData } from './data';
+import Player from './Player';
+import './App.css';
 
 class App extends Component {
 	constructor(props) {
@@ -51,28 +12,6 @@ class App extends Component {
 			images: animalData[0].images,
 		};
 	}
-
-	// startTransition(d, i) {
-	// 	return { value: 0, y: i * barHeight, opacity: 0 };
-	// }
-
-	// enterTransition(d) {
-	// 	return { value: [d.value], opacity: [1], timing: { duration: 250 } };
-	// }
-
-	// updateTransition(d, i) {
-	// 	return { value: [d.value], y: [i * barHeight], timing: { duration: 300 } };
-	// }
-
-	// leaveTransition() {
-	// 	return { y: [-barHeight], opacity: [0], timing: { duration: 250 } };
-	// }
-	// getAnimalByCategory(value) {
-	// 	const { data } = this.state;
-	// 	const images = data.find((category) => category.name === value).images;
-
-	// 	this.setState({ images });
-	// }
 
 	render() {
 		const { data } = this.state;
