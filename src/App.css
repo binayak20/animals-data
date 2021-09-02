@@ -85,8 +85,20 @@ body {
 	color: #fff;
 	margin: 6px;
 	/* text-align: center; */
-	font-size: 12px;
+	font-size: 15px;
 }
 .progress-bar-container {
 	margin-top: 10px;
+}
+.MinPlayer-video video {
+	border-radius: unset !important;
+}
+.MinPlayer-video {
+	border-radius: unset !important;
+}
+.MiniPlayer-videoBox {
+	border-radius: unset !important;
+}
+.MiniPlayer {
+	border-radius: unset !important;
 }

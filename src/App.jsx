@@ -84,27 +84,12 @@ class App extends Component {
 							<SelectGrid />
 						</div>
 						<div className='col-md-6 '>
-							<Player />
-							{/* <svg width='800' height='2200'>
-								<g className='chart' transform='translate(100,10)'>
-									<NodeGroup
-										data={this.state.data}
-										keyAccessor={(d) => d.name}
-										start={this.startTransition}
-										enter={this.enterTransition}
-										update={this.updateTransition}
-										leave={this.leaveTransition}
-									>
-										{(nodes) => (
-											<g>
-												{nodes.map(({ key, data, state }) => (
-													<BarGroup key={key} data={data} state={state} />
-												))}
-											</g>
-										)}
-									</NodeGroup>
-								</g>
-							</svg> */}
+							<div className='row'>
+								<div className='col-md-10'>
+									<Player />
+								</div>
+							</div>
+
 							<div className='progress-bar-container'>
 								{data.map((category) => (
 									<div className='row' key={category.name}>
@@ -128,46 +113,6 @@ class App extends Component {
 									</div>
 								))}
 							</div>
-							{/* <div className='progress'>
-								<div
-									className='progress-bar progress-bar-animated'
-									role='progressbar'
-									style={{ width: '25%' }}
-									aria-valuenow='25'
-									aria-valuemin='0'
-									aria-valuemax='100'
-								></div>
-							</div>
-							<div className='progress'>
-								<div
-									className='progress-bar'
-									role='progressbar'
-									style={{ width: '50%' }}
-									aria-valuenow='50'
-									aria-valuemin='0'
-									aria-valuemax='100'
-								></div>
-							</div>
-							<div className='progress'>
-								<div
-									className='progress-bar'
-									role='progressbar'
-									style={{ width: '75%' }}
-									aria-valuenow='75'
-									aria-valuemin='0'
-									aria-valuemax='100'
-								></div>
-							</div>
-							<div className='progress'>
-								<div
-									className='progress-bar'
-									role='progressbar'
-									style={{ width: '100%' }}
-									aria-valuenow='100'
-									aria-valuemin='0'
-									aria-valuemax='100'
-								></div>
-							</div> */}
 						</div>
 					</div>
 				</div>
