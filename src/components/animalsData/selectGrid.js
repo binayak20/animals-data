@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { animalData } from '../../data';
 
-const SelectGrid = () => {
+const SelectGrid = ({ animalData }) => {
 	const [images, setImages] = useState(animalData[0].images);
 	const getAnimalByCategory = (value) => {
 		const images = animalData.find(
