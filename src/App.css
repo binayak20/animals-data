@@ -102,3 +102,6 @@ body {
 .MiniPlayer {
 	border-radius: unset !important;
 }
+.row {
+	transition: 0.5s all;
+}

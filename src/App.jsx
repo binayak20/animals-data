@@ -1,18 +1,20 @@
+/* eslint-disable no-undef */
 import React, { Component } from 'react';
 import SelectGrid from './components/animalsData/selectGrid';
-import { animalData } from './data';
+import FlipMove from 'react-flip-move';
 import Player from './Player';
 import './App.css';
+//
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			data: [],
-			images: animalData[0].images,
 			allImages: [],
 		};
 	}
+
 	componentDidMount() {
 		let imgs = [];
 		for (let i = 0; i < 50; i++) {
@@ -24,6 +26,13 @@ class App extends Component {
 		}
 		this.setState({ data: imgs });
 		this.getAllImages();
+	}
+
+	getSortedArray(imgData) {
+		const sortedArr = imgData.sort((a, b) => {
+			return b.images.length - a.images.length;
+		});
+		return sortedArr;
 	}
 
 	getAllImages() {
@@ -47,7 +56,12 @@ class App extends Component {
 					const index = Math.floor(Math.random() * 50);
 					let imgData = this.state.data;
 					imgData[index].images.push(base64ImageData);
-					this.setState({ data: imgData });
+
+					const sortedArray = this.getSortedArray(imgData);
+
+					this.setState({
+						data: sortedArray,
+					});
 				}
 			};
 			setTimeout(drawImage, 1000 / 24);
@@ -73,27 +87,34 @@ class App extends Component {
 							</div>
 
 							<div className='progress-bar-container'>
-								{data.map((category) => (
-									<div className='row' key={category.name}>
-										<div className='col-md-10'>
-											<div className='progress'>
-												<div
-													className='progress-bar'
-													role='progressbar'
-													style={{ width: `${category.images.length}%` }}
-													aria-valuenow={category.images.length}
-													aria-valuemin='0'
-													aria-valuemax={category.images.length}
-												>
-													{category.images.length}
+								<FlipMove
+									duration={500}
+									staggerDelayBy={500}
+									staggerDurationBy={1000}
+									style={{ zIndex: -1 }}
+								>
+									{data.map((category) => (
+										<div className='row' key={category.name}>
+											<div className='col-md-10'>
+												<div className='progress'>
+													<div
+														className='progress-bar'
+														role='progressbar'
+														style={{ width: `${category.images.length}%` }}
+														aria-valuenow={category.images.length}
+														aria-valuemin='0'
+														aria-valuemax={category.images.length}
+													>
+														{category.images.length}
+													</div>
 												</div>
 											</div>
+											<div className='col-md-2'>
+												<div className='label'>{category.name}</div>
+											</div>
 										</div>
-										<div className='col-md-2'>
-											<div className='label'>{category.name}</div>
-										</div>
-									</div>
-								))}
+									))}
+								</FlipMove>
 							</div>
 						</div>
 					</div>

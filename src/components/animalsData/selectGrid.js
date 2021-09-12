@@ -9,6 +9,7 @@ const SelectGrid = ({ animalData }) => {
 
 		setImages(images);
 	};
+
 	return (
 		<div>
 			<select
@@ -17,8 +18,8 @@ const SelectGrid = ({ animalData }) => {
 				aria-label='Default select example'
 				onChange={(e) => getAnimalByCategory(e.target.value)}
 			>
-				{animalData.map((category) => (
-					<option key={category.name} value={category.name}>
+				{animalData.map((category, index) => (
+					<option key={index} value={category.name}>
 						{category.name}
 					</option>
 				))}
