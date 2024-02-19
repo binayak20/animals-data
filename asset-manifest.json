@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/binayak20/animals-data/static/css/main.a6de1196.chunk.css",
+    "main.js": "/binayak20/animals-data/static/js/main.620a3627.chunk.js",
+    "main.js.map": "/binayak20/animals-data/static/js/main.620a3627.chunk.js.map",
+    "runtime-main.js": "/binayak20/animals-data/static/js/runtime-main.f8855264.js",
+    "runtime-main.js.map": "/binayak20/animals-data/static/js/runtime-main.f8855264.js.map",
+    "static/js/2.b16a616b.chunk.js": "/binayak20/animals-data/static/js/2.b16a616b.chunk.js",
+    "static/js/2.b16a616b.chunk.js.map": "/binayak20/animals-data/static/js/2.b16a616b.chunk.js.map",
+    "index.html": "/binayak20/animals-data/index.html",
+    "static/css/main.a6de1196.chunk.css.map": "/binayak20/animals-data/static/css/main.a6de1196.chunk.css.map",
+    "static/js/2.b16a616b.chunk.js.LICENSE.txt": "/binayak20/animals-data/static/js/2.b16a616b.chunk.js.LICENSE.txt",
+    "static/media/aspect_ratio.f271a4b4.svg": "/binayak20/animals-data/static/media/aspect_ratio.f271a4b4.svg",
+    "static/media/close.cf3778b3.svg": "/binayak20/animals-data/static/media/close.cf3778b3.svg",
+    "static/media/volume_off.59461302.svg": "/binayak20/animals-data/static/media/volume_off.59461302.svg",
+    "static/media/volume_up.b7a62156.svg": "/binayak20/animals-data/static/media/volume_up.b7a62156.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8855264.js",
+    "static/js/2.b16a616b.chunk.js",
+    "static/css/main.a6de1196.chunk.css",
+    "static/js/main.620a3627.chunk.js"
+  ]
+}
