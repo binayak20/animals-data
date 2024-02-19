@@ -26,6 +26,16 @@ class App extends Component {
 		}
 		this.setState({ data: imgs });
 		this.getAllImages();
+		// this.setState({ data: imgs, loading: true }, () => {
+		// 	this.getAllImages()
+		// 		.then(() => {
+		// 			this.setState({ loading: false });
+		// 		})
+		// 		.catch((error) => {
+		// 			console.error('Failed to fetch images', error);
+		// 			this.setState({ loading: false, error: 'Failed to load images' });
+		// 		});
+		// });
 	}
 
 	getSortedArray(imgData) {
@@ -37,7 +47,15 @@ class App extends Component {
 
 	getAllImages() {
 		const canvas = document.querySelector('canvas');
+		if (!canvas) {
+			console.error('Canvas not found');
+			return;
+		}
 		const video = document.querySelector('video');
+		if (!video) {
+			console.error('Video not found');
+			return;
+		}
 		const ctx = canvas.getContext('2d');
 
 		video.addEventListener('loadedmetadata', () => {
@@ -70,6 +88,7 @@ class App extends Component {
 
 	render() {
 		const { data } = this.state;
+		console.log('Data:', data);
 
 		return (
 			<div className='main'>
